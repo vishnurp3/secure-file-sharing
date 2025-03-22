@@ -1,10 +1,6 @@
 spring:
   profiles:
     active: dev
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
-    validate-on-migrate: true
   servlet:
     multipart:
       max-file-size: 10MB
@@ -13,5 +9,5 @@ file:
   link:
     expiry-minutes: 30
 jwt:
-  secret: your-default-secret-key
+  secret: a8F3zX9qP1mLb6YwT4VkN2rJ7dCgQ0MH
   expiration: 86400000
