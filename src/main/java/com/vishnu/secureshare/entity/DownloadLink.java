@@ -17,6 +17,9 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 
+import static com.vishnu.secureshare.constants.FileConstants.FILE_API_BASE_ENDPOINT;
+import static com.vishnu.secureshare.constants.FileConstants.FILE_DOWNLOAD_ENDPOINT;
+
 @Entity
 @Table(name = "download_links")
 @Getter
@@ -37,4 +40,8 @@ public class DownloadLink {
     @Column(nullable = false)
     private LocalDateTime expiryTime;
     private LocalDateTime createdAt;
+
+    public String getDownloadLink() {
+        return String.join("/", FILE_API_BASE_ENDPOINT, FILE_DOWNLOAD_ENDPOINT, uniqueToken);
+    }
 }
