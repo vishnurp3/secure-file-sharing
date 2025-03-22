@@ -9,5 +9,5 @@ file:
   link:
     expiry-minutes: 30
 jwt:
-  secret: a8F3zX9qP1mLb6YwT4VkN2rJ7dCgQ0MH
+  secret: ${JWT_SECRET}
   expiration: 86400000
